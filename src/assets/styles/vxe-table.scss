@@ -1,0 +1,9 @@
+@import 'imports/colors';
+
+$vxe-primary-color: $--primary !default;
+$vxe-success-color: $--success !default;
+$vxe-info-color: $--info !default;
+$vxe-warning-color: $--warning !default;
+$vxe-danger-color: $--danger !default;
+
+@import 'vxe-table/styles/index';

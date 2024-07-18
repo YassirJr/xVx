@@ -1,0 +1,21 @@
+name: Check conflicts
+on:
+  workflow_dispatch:
+  # pull_request:
+  #   branches-ignore:
+  #     - dev
+  #     - master
+  #     - production
+  #     - '!dependabot/*'
+  #     - '!dependabot/*/**'
+
+jobs:
+  conflibot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Warn potential conflicts
+        uses: wktk/conflibot@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

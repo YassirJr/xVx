@@ -1,0 +1,54 @@
+name: Staging - Build Desktop app
+on:
+  workflow_dispatch:
+
+jobs:
+  desktop_release:
+    if: contains('["MDeev"]', github.actor)
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [windows-latest] #[macos-latest, windows-latest]
+        node-version: [16.x]
+    steps:
+      - name: Delete old drafts
+        uses: hugo19941994/delete-draft-releases@v1.0.1
+        with:
+          threshold: 5d
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+
+      - name: Build and deploy
+        uses: actions/checkout@v4
+      - run: git checkout dev
+      - run: git pull origin dev
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Get release notes
+        id: notes
+        uses: andstor/file-reader-action@v1
+        with:
+          path: 'release-notes.md'
+
+      - name: Create new release
+        uses: antifree/json-to-variables@v1.1.1
+        with:
+          filename: 'package.json'
+          prefix: info
+      - run: gh release create v"${{ env.info_version }}" --title "${{ env.info_version }}" --notes "${{ steps.notes.outputs.contents }}" --draft --repo "https://github.com/${{ env.info_build_publish_owner }}/${{ env.info_build_publish_repo }}"
+        env:
+          GH_TOKEN: ${{secrets.GIT_TOKEN}}
+
+      - name: Create .env file
+        uses: ozaytsev86/create-env-file@v1
+        with:
+          ENV_VITE_APP_API: ${{secrets.STAGING_API_URI}}
+
+      - run: npm install
+      - run: npm run deploy
+        env:
+          GH_TOKEN: ${{secrets.GIT_TOKEN}}

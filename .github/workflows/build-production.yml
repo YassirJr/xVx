@@ -1,0 +1,129 @@
+name: PRODUCTION - Build web
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    if: contains('["MDeev"]', github.actor)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        shell: bash
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
+
+      - uses: actions/cache@v4
+        id: npm-cache
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Create Pull Request
+        id: pr
+        uses: repo-sync/pull-request@v2
+        with:
+          source_branch: 'master'
+          destination_branch: 'production'
+          pr_title: 'Merge master into production'
+          pr_body: 'An automated pull request'
+          pr_label: 'automerge'
+          pr_allow_empty: false
+          github_token: ${{ secrets.GIT_TOKEN }}
+
+      - name: Auto Merge Pull Request
+        if: steps.pr.outputs.pr_number > 0
+        uses: pascalgn/automerge-action@v0.15.6
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          PULL_REQUEST: ${{ steps.pr.outputs.pr_number }}
+          MERGE_LABELS: 'automerge'
+
+      - name: Set Swap Space
+        uses: pierotofy/set-swap-space@master
+        with:
+          swap-size-gb: 10
+
+      - name: Deploy frontend to QCM
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{secrets.SSH_HOST_PRODUCTION}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_KEY_PRODUCTION}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME_PRODUCTION }} # User of the server you want to ssh into
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd /home/${{secrets.SSH_USERNAME_PRODUCTION}}/agriwise-web
+            git checkout production
+            git pull https://${{secrets.GIT_TOKEN}}@github.com/Agriwise/agriwise-web.git production
+            rm -rf package-lock.json node_modules
+            npm install && npm i element-plus@2.3.14
+            npm run build:max
+
+      - name: Deploy frontend to QFS
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{secrets.SSH_HOST_PROD_QFS}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_KEY}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd /home/${{secrets.SSH_USERNAME}}/agriwise-web
+            git checkout production
+            git pull https://${{secrets.GIT_TOKEN}}@github.com/Agriwise/agriwise-web.git production
+            rm -rf package-lock.json node_modules
+            npm install && npm i element-plus@2.3.14
+            npm run build:max
+
+      - name: Deploy frontend to Gan Fruits
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{secrets.SSH_HOST_PROD_DEMO_APP}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_KEY}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd /home/${{secrets.SSH_USERNAME}}/agriwise-web
+            git checkout production
+            git pull https://${{secrets.GIT_TOKEN}}@github.com/Agriwise/agriwise-web.git production
+            rm -rf package-lock.json node_modules
+            npm install && npm i element-plus@2.3.14
+            npm run build:max
+
+      - name: Deploy frontend to PUREPASSION
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{secrets.SSH_HOST_PROD_PUREPASSION}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_KEY}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd /home/${{secrets.SSH_USERNAME}}/agriwise-web
+            git checkout production
+            git pull https://${{secrets.GIT_TOKEN}}@github.com/Agriwise/agriwise-web.git production
+            rm -rf package-lock.json node_modules
+            npm install && npm i element-plus@2.3.14
+            npm run build:max
+
+      - name: Deploy frontend to Vital Frozen
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{secrets.SSH_HOST_PROD_VITAL_FROZEN}} # IP address of the server you wish to ssh into
+          key: ${{secrets.SSH_KEY}} # Private or public key of the server
+          username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            cd /home/${{secrets.SSH_USERNAME}}/agriwise-web
+            git checkout production
+            git pull https://${{secrets.GIT_TOKEN}}@github.com/Agriwise/agriwise-web.git production
+            rm -rf package-lock.json node_modules
+            npm install && npm i element-plus@2.3.14
+            npm run build:max

@@ -1,0 +1,38 @@
+@import 'imports/index';
+
+.el-notification .el-notification__content {
+  text-align: unset;
+}
+
+.vxe-grid.is--loading:before {
+  background-color: rgba($--white, 0.75);
+}
+
+.el-radio-group .el-radio-button__inner {
+  display: block;
+}
+
+.el-input.el-date-editor {
+  .el-input__wrapper {
+    display: flex;
+  }
+}
+
+.times-roman {
+  * {
+    font-family: Times-Roman !important;
+  }
+}
+
+.amiri-bold {
+  * {
+    font-family: Amiri-Bold !important;
+    word-spacing: 1px;
+  }
+}
+
+.pdf-font {
+  * {
+    font-family: sans-serif !important;
+  }
+}

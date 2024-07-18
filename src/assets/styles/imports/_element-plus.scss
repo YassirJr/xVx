@@ -1,0 +1,28 @@
+@use 'sass:map';
+
+$--colors: () !default;
+$--colors: map.deep-merge(
+  (
+    'white': $--white,
+    'black': $--dark,
+    'primary': (
+      'base': $--primary,
+    ),
+    'success': (
+      'base': $--success,
+    ),
+    'warning': (
+      'base': $--warning,
+    ),
+    'danger': (
+      'base': $--danger,
+    ),
+    'error': (
+      'base': $--danger,
+    ),
+    'info': (
+      'base': $--info,
+    ),
+  ),
+  $--colors
+);

@@ -1,0 +1,323 @@
+{
+  "vxe": {
+    "base": {
+      "pleaseInput": "Veuillez saisir",
+      "pleaseSelect": "Sélectionner"
+    },
+    "loading": {
+      "text": "Chargement..."
+    },
+    "error": {
+      "groupFixed": "Si vous utilisez des en-têtes de groupe, les colonnes fixes doivent être définies par groupe.",
+      "groupMouseRange": "Les en-têtes de regroupement et \"{0}\" ne peuvent pas être utilisés en même temps, ce qui peut provoquer des erreurs.",
+      "groupTag": "L'en-tête de colonne de regroupement doit utiliser \"{0}\" au lieu de \"{1}\", ce qui peut provoquer des erreurs.",
+      "scrollErrProp": "Le paramètre \"{0}\" n'est pas pris en charge lorsque le défilement virtuel est activé.",
+      "errConflicts": "L'argument \"{0}\" est en conflit avec \"{1}\"",
+      "unableInsert": "Impossible d'insérer à l'emplacement spécifié.",
+      "useErr": "Erreur lors de l'installation du module \"{0}\", peut-être dans le mauvais ordre, les modules dépendants doivent être installés avant le tableau.",
+      "barUnableLink": "La barre d'outils ne peut pas associer la table.",
+      "expandContent": "L'emplacement de la ligne d'expansion doit être \"contenu\", veuillez vérifier s'il est correct.",
+      "reqModule": "nécessite le module \"{0}\".",
+      "reqProp": "Il manque le paramètre \"{0}\" nécessaire, ce qui peut provoquer une erreur.",
+      "emptyProp": "La propriété \"{0}\" ne doit pas être vide.",
+      "errProp": "Paramètre \"{0}\" non pris en charge, éventuellement \"{1}\".",
+      "colRepet": "colonne.{0}=\"{0}\" est dupliqué, ce qui peut rendre certaines fonctionnalités inutilisables.",
+      "notFunc": "la méthode \"{0}\" n'existe pas.",
+      "errFunc": "L'argument \"{0}\" n'est pas une méthode",
+      "notValidators": "Les validateurs globaux \"{0}\" n'existent pas.",
+      "notFormats": "Les formats globaux \"{0}\" n'existent pas.",
+      "notCommands": "Les commandes globales \"{0}\" n'existent pas.",
+      "notSlot": "L'emplacement \"{0}\" n'existe pas",
+      "noTree": "L'arborescence ne prend pas en charge \"{0}\".",
+      "notProp": "Paramètres non pris en charge \"{0}\"",
+      "checkProp": "La case à cocher peut se bloquer lorsque la quantité de données est trop importante, il est recommandé de définir le paramètre \"{0}\" pour augmenter la vitesse de rendu ",
+      "coverProp": "Le paramètre \"{1}\" à \"{0}\" est écrasé. ",
+      "delFunc": "La fonction \"{0}\" est obsolète, veuillez utiliser \"{1}\".",
+      "delProp": "La propriété \"{0}\" est obsolète, veuillez utiliser \"{1}\".",
+      "delEvent": "L'événement \"{0}\" est obsolète, veuillez utiliser \"{1}\"",
+      "removeProp": "La propriété \"{0}\" est obsolète et n'est pas recommandée, ce qui peut provoquer une erreur.",
+      "errFormat": "Le contenu formaté global doit être défini avec \"VXETable.formats\". ",
+      "notType": "Types de fichiers non pris en charge \"{0}\"",
+      "notExp": "Le navigateur ne prend pas en charge l'importation/exportation.",
+      "impFields": "L'importation a échoué. Veuillez vérifier que le nom du champ et le format des données sont corrects.",
+      "treeNotImp": "La table arborescente ne prend pas en charge l'importation."
+    },
+    "renderer": {
+      "search": "Recherche",
+      "cases": {
+        "equal": "Égal",
+        "unequal": "Inégal",
+        "gt": "Plus grand que",
+        "ge": "Meilleur que ou égal",
+        "lt": "Moins que",
+        "le": "Inférieur ou égal",
+        "begin": "Le début est",
+        "notbegin": "Le début n'est pas",
+        "endin": "La fin est",
+        "notendin": "La fin n'est pas",
+        "include": "Inclure",
+        "exclude": "Exclusif",
+        "between": "Entre-deux",
+        "custom": "Filtre personnalisé",
+        "insensitive": "Insensible à la casse",
+        "isSensitive": "Sensible aux majuscules et minuscules"
+      },
+      "combination": {
+        "menus": {
+          "clearSort": "Effacer le tri",
+          "sortAsc": "Ordre croissant",
+          "sortDesc": "Ordre décroissant",
+          "fixedColumn": "Colonne fixe",
+          "fixedGroup": "Groupe fixe",
+          "cancelFixed": "Effacer corrigé",
+          "fixedLeft": "Correction de la gauche",
+          "fixedRight": "Correction du droit",
+          "clearFilter": "Effacer le filtre",
+          "textOption": "Filtre de texte",
+          "numberOption": "Filtre numérique"
+        },
+        "popup": {
+          "title": "Filtrage personnalisé",
+          "currColumnTitle": "Colonne actuelle :",
+          "and": "Et",
+          "or": "Ou",
+          "describeHtml": "Utiliser ?  <br/> utilisez * pour représenter n'importe quel nombre de caractères"
+        },
+        "empty": "(Vide)",
+        "notData": "Pas de données"
+      }
+    },
+    "pro": {
+      "area": {
+        "mergeErr": "L'opération ne peut pas être effectuée sur les cellules fusionnées",
+        "multiErr": "L'opération ne peut pas être effectuée sur plusieurs zones de sélection",
+        "extendErr": "Si la zone étendue contient des cellules fusionnées, toutes les cellules fusionnées doivent avoir la même taille",
+        "pasteMultiErr": "Impossible de coller, une zone copiée et une zone collée de même taille sont nécessaires pour effectuer cette opération"
+      },
+      "fnr": {
+        "title": "Trouver et remplacer",
+        "findLabel": "Trouver",
+        "replaceLabel": "Remplacer",
+        "findTitle": "Que trouver :",
+        "replaceTitle": "Remplacer par:",
+        "tabs": {
+          "find": "Trouver",
+          "replace": "Remplacer"
+        },
+        "filter": {
+          "re": "Expression régulière",
+          "whole": "Mot entier",
+          "sensitive": "Sensible aux majuscules et minuscules"
+        },
+        "btns": {
+          "findNext": "Rechercher ensuite",
+          "findAll": "Trouver tout",
+          "replace": "Remplacer",
+          "replaceAll": "Remplace tout",
+          "cancel": "Annuler"
+        },
+        "header": {
+          "seq": "",
+          "cell": "Cellule",
+          "value": "Valeur"
+        },
+        "empty": "(Vide)",
+        "reError": "Expression régulière invalide",
+        "recordCount": "{0} cellules trouvées",
+        "notCell": "Aucune cellule correspondante n'a été trouvée",
+        "replaceSuccess": "Remplacement réussi de {0} cellules"
+      }
+    },
+    "table": {
+      "emptyText": "Pas de données",
+      "allTitle": "Tout sélectionner / annuler",
+      "seqTitle": "",
+      "confirmFilter": "Confirmer",
+      "resetFilter": "Réinitialiser",
+      "allFilter": "Tous",
+      "sortAsc": "Ascendant : du plus bas au plus élevé",
+      "sortDesc": "Décroissant : du plus haut au plus bas",
+      "filter": "Activer le filtrage sur les colonnes sélectionnées",
+      "impSuccess": "{0} enregistrements ont été importés avec succès",
+      "expLoading": "Exportation",
+      "expSuccess": "Succès à l’exportation",
+      "expFilename": "Exporter_{0}",
+      "expOriginFilename": "Exportation_original_{0}",
+      "customTitle": "Paramètres de colonne",
+      "customAll": "Tous",
+      "customConfirm": "Confirmer",
+      "customRestore": "Réinitialiser",
+      "maxFixedCol": "Le nombre maximum de colonnes fixes ne peut pas dépasser {0}"
+    },
+    "grid": {
+      "selectOneRecord": "Veuillez choisir au moins un morceau de disque !",
+      "deleteSelectRecord": "Etes-vous sûr de vouloir supprimer l'enregistrement sélectionné ?",
+      "removeSelectRecord": "Etes-vous sûr de vouloir supprimer l'enregistrement sélectionné ?",
+      "dataUnchanged": "Données inchangées ! ",
+      "delSuccess": "L'enregistrement sélectionné a été supprimé avec succès !",
+      "saveSuccess": "Enregistré avec succès !",
+      "operError": "Une erreur s'est produite, l'opération a échoué !"
+    },
+    "select": {
+      "search": "Recherche",
+      "loadingText": "Chargement",
+      "emptyText": "Pas de données"
+    },
+    "pager": {
+      "goto": "Aller à",
+      "pagesize": "{0}/page",
+      "total": "Total de {0} enregistrement",
+      "pageClassifier": "",
+      "prevPage": "Page précédente",
+      "nextPage": "page suivante",
+      "prevJump": "Aller à la page précédente",
+      "nextJump": "Passer à la page suivante"
+    },
+    "alert": {
+      "title": "Notification des messages"
+    },
+    "button": {
+      "confirm": "Confirmer",
+      "cancel": "Annuler"
+    },
+    "import": {
+      "modes": {
+        "covering": "Couvrant",
+        "insert": "Insérer"
+      },
+      "impTitle": "Importer des données",
+      "impFile": "Nom de fichier",
+      "impSelect": "Choisir le dossier",
+      "impType": "Type de fichier",
+      "impOpts": "Paramètres",
+      "impConfirm": "Importer",
+      "impCancel": "Annuler"
+    },
+    "export": {
+      "types": {
+        "csv": "CSV (séparés par des virgules) (*.csv)",
+        "html": "Page Web (*.html)",
+        "xml": "Données XML (*.xml)",
+        "txt": "Texte (séparé par des tabulations) (*.txt)",
+        "xls": "Classeur Excel 97-2003 (*.xls)",
+        "xlsx": "Classeur Excel (*.xlsx)",
+        "pdf": "PDF (*.pdf)"
+      },
+      "modes": {
+        "current": "Données actuelles (données de la page actuelle)",
+        "selected": "Données sélectionnées (données sélectionnées sur la page actuelle)",
+        "all": "Données complètes (y compris toutes les données de pagination)"
+      },
+      "printTitle": "Imprimer les données",
+      "expTitle": "Exporter des données",
+      "expName": "Nom de fichier",
+      "expNamePlaceholder": "Veuillez entrer le nom du fichier",
+      "expSheetName": "Titre",
+      "expSheetNamePlaceholder": "Veuillez entrer un titre",
+      "expType": "Enregistrer le type",
+      "expMode": "Sélectionner des données",
+      "expCurrentColumn": "Tout le terrain",
+      "expColumn": "Sélectionner un champ",
+      "expOpts": "Paramètres",
+      "expOptHeader": "Entête",
+      "expHeaderTitle": "Ai-je besoin d'un en-tête",
+      "expOptFooter": "Bas de page",
+      "expFooterTitle": "Avez-vous besoin du tableau de pied de page",
+      "expOptColgroup": "En-tête de groupe",
+      "expColgroupTitle": "S'il existe, les en-têtes avec structure de regroupement sont pris en charge",
+      "expOptMerge": "Fusionner",
+      "expMergeTitle": "S'il existe, les cellules avec des structures fusionnées sont prises en charge",
+      "expOptAllExpand": "Développer les nœuds",
+      "expAllExpandTitle": "Si elle existe, toutes les données avec une structure arborescente peuvent être développées",
+      "expOptUseStyle": "modes",
+      "expUseStyleTitle": "S'il existe, les cellules avec des styles sont prises en charge",
+      "expOptOriginal": "Données source",
+      "expOriginalTitle": "S'il s'agit de données sources, l'importation dans la table est prise en charge",
+      "expPrint": "Imprimer",
+      "expConfirm": "Exporter",
+      "expCancel": "Annuler"
+    },
+    "modal": {
+      "zoomIn": "Maximisation",
+      "zoomOut": "Réduction",
+      "close": "Fermer"
+    },
+    "form": {
+      "folding": "Pliant",
+      "unfolding": "Déploiement"
+    },
+    "toolbar": {
+      "import": "Importer",
+      "export": "Exporter",
+      "print": "Impression",
+      "refresh": "Rafraîchir",
+      "zoomIn": "Plein écran",
+      "zoomOut": "Réduction",
+      "custom": "Paramètres de colonne",
+      "customAll": "Tous",
+      "customConfirm": "Confirmer",
+      "customRestore": "Réinitialiser",
+      "fixedLeft": "Fixé sur le côté gauche",
+      "fixedRight": "Fixé sur le côté droit",
+      "cancelfixed": "Non corrigé"
+    },
+    "input": {
+      "date": {
+        "m1": "Janvier",
+        "m2": "Février",
+        "m3": "Mars",
+        "m4": "Avril",
+        "m5": "Mai",
+        "m6": "Juin",
+        "m7": "Juillet",
+        "m8": "Août",
+        "m9": "Septembre",
+        "m10": "Octobre",
+        "m11": "Novembre",
+        "m12": "Décembre",
+        "quarterLabel": "{0}",
+        "monthLabel": "{0}",
+        "dayLabel": "{dix}",
+        "labelFormat": {
+          "date": "jj/MM/aaaa",
+          "time": "HH : mm : ss",
+          "datetime": "aaaa-MM-jj HH:mm:ss",
+          "week": "[Semaine] WW, aaaa",
+          "month": "MM/aaaa",
+          "quarter": "[Trimestre] q, aaaa",
+          "year": "aaaa"
+        },
+        "weeks": {
+          "w": "Semaine",
+          "w0": "Dim",
+          "w1": "Lun",
+          "w2": "Mar",
+          "w3": "Mer",
+          "w4": "Jeu",
+          "w5": "Ven",
+          "w6": "Sam"
+        },
+        "months": {
+          "m0": "Jan",
+          "m1": "Fév",
+          "m2": "Mar",
+          "m3": "Avr",
+          "m4": "Mai",
+          "m5": "juin",
+          "m6": "Juil",
+          "m7": "Août",
+          "m8": "Sep",
+          "m9": "Oct",
+          "m10": "Nov",
+          "m11": "Déc"
+        },
+        "quarters": {
+          "q1": "Premier quart",
+          "q2": "Deuxième quartier",
+          "q3": "Troisième quart",
+          "q4": "Quatrième trimestre"
+        }
+      }
+    }
+  }
+}

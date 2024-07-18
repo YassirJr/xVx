@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "esModuleInterop": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"]
+    },
+    "jsx": "preserve",
+    "lib": ["esnext", "dom", "dom.iterable"]
+  },
+  "exclude": ["node_modules", "dist", "**/node_modules/**", "**/dist/**"]
+}
