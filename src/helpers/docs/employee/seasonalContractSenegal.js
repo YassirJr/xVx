@@ -62,7 +62,7 @@ export function getSeasonalContractSenegal(employee, company, lastIndex) {
       Le décret 70-180 du 20 février 1970 fixant les conditions particulières d’emploi du travailleur
       journalier et du travailleur saisonnier ;
     </li>
-    <li>Ensemble des textes règlementant les professions agricoles et assimilées</li>
+    <li>Ensemble des textes règlementant les professions xVxcoles et assimilées</li>
     <li>La convention collective nationale ; interprofessionnelle du 30 décembre 2019 ;</li>
     <li>Le règlement intérieur de la Société.</li>
   </ul>
@@ -76,7 +76,7 @@ export function getSeasonalContractSenegal(employee, company, lastIndex) {
     L’Employé exercera les fonctions ${
       mission.label
     }. Il est classé à la catégorie ${social_category} de la Classification
-    des emplois des professions agricoles.
+    des emplois des professions xVxcoles.
   </p>
   <h2 class="mt-2 font-bold">Article - 4 : Lieu de Travail et Mobilité</h2>
   <p>

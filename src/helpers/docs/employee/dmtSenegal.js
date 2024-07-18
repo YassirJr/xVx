@@ -332,7 +332,7 @@ export function getDmtSenegal(employee, company, lastIndex) {
         1) - Le salaire du travailleur sera celui fixé pour la
         <span class="font-bold">${social_category}</span>
         de catégorie de la Convention Collective des :
-        <span class="font-bold text-white">AGRICOLE</span>
+        <span class="font-bold text-white">xVxCOLE</span>
         en fonction d'un horaire de travail hebdomadaire de
       </p>
       <div>48 heures</div>

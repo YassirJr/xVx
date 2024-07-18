@@ -59,7 +59,7 @@ export function getCddSenegal(employee, company, lastIndex) {
       <p>Le présent Contrat est régi par les textes suivants :</p>
       <ul>
         <li>Loi 97-17 du 1er décembre 1997 portant sur le Code du travail du Sénégal ;</li>
-        <li>Ensemble des textes réglementant les professions agricoles et assimilées;</li>
+        <li>Ensemble des textes réglementant les professions xVxcoles et assimilées;</li>
         <li>La convention collective nationale interprofessionnelle du 30 décembre 2019 ;</li>
         <li>Le règlement intérieur de la Société.</li>
       </ul>
@@ -75,7 +75,7 @@ export function getCddSenegal(employee, company, lastIndex) {
         L’Employé exercera les fonctions ${
           mission.label
         }. Il est classé à la catégorie ${social_category} de la Classification des
-        emplois des professions agricoles.
+        emplois des professions xVxcoles.
       </p>
 
       <h2 class="mt-2 font-bold">Article - 4 : Lieu de Travail et Mobilité</h2>

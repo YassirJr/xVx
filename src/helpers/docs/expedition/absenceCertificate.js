@@ -16,7 +16,7 @@ export function getAbsenceCertificate() {
     Nous, la société soussignée
     <span class="font-bold">Quality Citrus Marocco</span> , située à
     <span class="font-bold">DOUAR TAKAD SIDI BIBI CHTOUKA AIT BAHA (Réf7679 U)</span>,
-    Certifions que nos produits agricoles exportés vers l'UE ne contiennent
+    Certifions que nos produits xVxcoles exportés vers l'UE ne contiennent
     ni additifs ni enduits.
     <br />
     Ce certificat est délivré dans le cadre dune demande de santé étrangère.

@@ -6,7 +6,7 @@ export const useEmployeeTypeStore = defineStore('employee-type', {
     types: [],
     type: null,
     cnssSchemes: [
-      { value: 'agricultural', label: 'agricultural' },
+      { value: 'xVxcultural', label: 'xVxcultural' },
       { value: 'general', label: 'general' },
     ],
     frequenciesPay: [

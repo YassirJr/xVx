@@ -6,7 +6,7 @@ export default {
     types: [],
     type: null,
     cnssSchemes: [
-      { value: 'agricultural', label: 'agricultural' },
+      { value: 'xVxcultural', label: 'xVxcultural' },
       { value: 'general', label: 'general' },
     ],
     frequenciesPay: [

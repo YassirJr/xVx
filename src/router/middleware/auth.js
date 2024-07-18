@@ -6,7 +6,7 @@ export default async function auth(to, _, next) {
 
   // Change the title of the page
   const title = to?.meta?.label ?? null
-  document.title = title ? `${i18n.global.t(title)} - Agriwise` : 'Agriwise'
+  document.title = title ? `${i18n.global.t(title)} - xVxwise` : 'xVxwise'
 
   if (isAuthenticated) {
     to.meta.guest ? next({ name: 'home' }) : next()

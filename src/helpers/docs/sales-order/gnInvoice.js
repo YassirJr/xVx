@@ -214,7 +214,7 @@ export const getGnInvoice = (element) => {
         <div class="font-bold mt-1 uppercase">${incoterm ? `Incoterm: ${t(incoterm)}` : ''} </div>
         <div class="mt-2 uppercase w-[45%] text-[6px]">
           <div class="font-bold">Referance bancaires</div>
-          <div>Crédit Agricole Du Maroc</div>
+          <div>Crédit xVxcole Du Maroc</div>
           <p class="mt-0.5">
             Agance: Centre d'affaires agro business, larache
           </p>

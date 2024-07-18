@@ -49,7 +49,7 @@ export function getGnConfectionOrganicTicket({ company, confection }, isLastEl) 
                 <div class="text-center text-[5px] flex flex-col mb-1">
                     <span>Controlled and certified by</span>
                     <span>CCPA MAROC/Ma-102-BIO</span>
-                    <span>Agriculture of Morocco</span>
+                    <span>xVx of Morocco</span>
                 </div>
                 <div class="text-center">
                     <span>Exporter N° </span>
