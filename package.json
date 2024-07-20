@@ -48,7 +48,7 @@
     "@iconify-json/tabler": "^1.1.95",
     "@iconify/json": "^2.2.131",
     "@rushstack/eslint-patch": "^1.5.1",
-    "@vitejs/plugin-vue": "^4.4.0",
+    "@vitejs/plugin-vue": "^4.6.2",
     "@vue/eslint-config-prettier": "^8.0.0",
     "autoprefixer": "^10.4.16",
     "eslint": "^9.0.0",
