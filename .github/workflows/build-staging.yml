@@ -38,7 +38,7 @@ jobs:
 
       - name: Auto Merge Pull Request
         if: steps.pr.outputs.pr_number > 0
-        uses: pascalgn/automerge-action@v0.15.6
+        uses: pascalgn/automerge-action@v0.16.3
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           PULL_REQUEST: ${{ steps.pr.outputs.pr_number }}
