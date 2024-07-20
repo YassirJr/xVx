@@ -35,7 +35,7 @@ jobs:
           path: 'release-notes.md'
 
       - name: Create new release
-        uses: antifree/json-to-variables@v1.1.1
+        uses: antifree/json-to-variables@v1.2.0
         with:
           filename: 'package.json'
           prefix: info
