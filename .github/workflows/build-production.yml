@@ -49,7 +49,7 @@ jobs:
           swap-size-gb: 10
 
       - name: Deploy frontend to QCM
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1.1.0
         with:
           host: ${{secrets.SSH_HOST_PRODUCTION}} # IP address of the server you wish to ssh into
           key: ${{secrets.SSH_KEY_PRODUCTION}} # Private or public key of the server
@@ -65,7 +65,7 @@ jobs:
             npm run build:max
 
       - name: Deploy frontend to QFS
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1.1.0
         with:
           host: ${{secrets.SSH_HOST_PROD_QFS}} # IP address of the server you wish to ssh into
           key: ${{secrets.SSH_KEY}} # Private or public key of the server
@@ -81,7 +81,7 @@ jobs:
             npm run build:max
 
       - name: Deploy frontend to Gan Fruits
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1.1.0
         with:
           host: ${{secrets.SSH_HOST_PROD_DEMO_APP}} # IP address of the server you wish to ssh into
           key: ${{secrets.SSH_KEY}} # Private or public key of the server
@@ -97,7 +97,7 @@ jobs:
             npm run build:max
 
       - name: Deploy frontend to PUREPASSION
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1.1.0
         with:
           host: ${{secrets.SSH_HOST_PROD_PUREPASSION}} # IP address of the server you wish to ssh into
           key: ${{secrets.SSH_KEY}} # Private or public key of the server
@@ -113,7 +113,7 @@ jobs:
             npm run build:max
 
       - name: Deploy frontend to Vital Frozen
-        uses: appleboy/ssh-action@v1.0.0
+        uses: appleboy/ssh-action@v1.1.0
         with:
           host: ${{secrets.SSH_HOST_PROD_VITAL_FROZEN}} # IP address of the server you wish to ssh into
           key: ${{secrets.SSH_KEY}} # Private or public key of the server
